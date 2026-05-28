@@ -58,35 +58,111 @@ with colB:
 # -------------------------------------------------
 # HOME
 # -------------------------------------------------
+
 if st.session_state.page == "Home":
 
-    st.image("assets/profile.jpg", width=160)
-    st.markdown("## Shreya Sabale")
-    st.markdown("**Data Analyst | SQL • Python • Power BI • Excel**")
+    left, right = st.columns([1,2])
 
-    st.markdown("""
-    I am an analyst who enjoys working at confluence of data and observation to uncover insights,
-    solve real-world problems, and make confident decisions.
-    """)
+    with left:
+        st.image("assets/profile.jpg", width=220)
 
-    col1, col2, col3, col4 = st.columns(4)
+    with right:
 
-    if col1.button("📊 Projects"):
-        st.session_state.page = "Projects"
+        st.markdown("# Shreya Sabale")
+        st.markdown("### Business Analyst")
+
+        st.markdown("""
+        *Business Analyst exploring how data, systems, and people come together  
+        to create better decisions and better outcomes.*
+        """)
+
+        st.markdown("""
+        Currently working across ERP systems, operational analytics,
+        reporting workflows, and business intelligence within manufacturing environments.
+        """)
+
+        col1,col2,col3,col4 = st.columns(4)
+
+        with col1:
+            st.metric("Functions", "Sales + HR")
+
+        with col2:
+            st.metric("Tools", "Excel + SQL")
+
+        with col3:
+            st.metric("Focus", "Analytics")
+
+        with col4:
+            st.metric("Domain", "Manufacturing")
+
+    st.markdown("---")
+
+    st.subheader("What I Work On")
+
+    c1,c2 = st.columns(2)
+
+    with c1:
+
+        st.markdown("""
+        ### Operational Analytics
+
+        - KPI Tracking  
+        - Reporting Workflows  
+        - Dashboard Development  
+        - Process Visibility  
+        """)
+
+        st.markdown("""
+        ### Business Systems
+
+        - ERP Analysis  
+        - Production Tracking  
+        - Automation  
+        - Data Cleaning  
+        """)
+
+    with c2:
+
+        st.markdown("""
+        ### Growth & Marketing
+
+        - Distributor Analysis  
+        - Customer Insights  
+        - Sales Projection  
+        - Marketing Analytics  
+        """)
+
+        st.markdown("""
+        ### Cross Functional Work
+
+        - Sales  
+        - Marketing  
+        - HR  
+        - Business Reporting  
+        """)
+
+    st.markdown("---")
+
+    nav1,nav2,nav3,nav4 = st.columns(4)
+
+    if nav1.button("My Story"):
+        st.session_state.page="About"
         st.rerun()
 
-    if col2.button("👩‍💼 About Me"):
-        st.session_state.page = "About"
+    if nav2.button("Selected Work"):
+        st.session_state.page="Projects"
         st.rerun()
 
-    if col3.button("✍️ Blogs"):
-        st.session_state.page = "Blogs"
+    if nav3.button("Certifications"):
+        st.session_state.page="Certifications"
         st.rerun()
 
-    if col4.button("🏆 Certifications"):
-        st.session_state.page = "Certifications"
-        st.rerun()
-
+    if nav4.button("Resume"):
+        st.download_button(
+            "Download Resume",
+            open("assets/resume.pdf","rb"),
+            "Shreya_Sabale_Resume.pdf"
+        )
 # -------------------------------------------------
 # ABOUT
 # -------------------------------------------------
