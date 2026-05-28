@@ -229,11 +229,79 @@ Beyond work, I enjoy exploring ideas through volunteering, reading, writing, and
 # -------------------------------------------------
 # PROJECTS
 # -------------------------------------------------
+
 elif st.session_state.page == "Projects":
 
-    st.markdown("## 📊 Projects")
+    st.markdown("## 📊 Selected Work")
+
+    # -----------------------------------------
+    # BUSINESS IMPACT PROJECTS
+    # -----------------------------------------
+
+    st.markdown("### Business Impact Projects")
+
+    professional_projects = [
+
+        {
+            "title":"Party Master Analysis",
+            "impact":"Analysed and standardized 4607+ unique party records, improving customer data visibility, identifying inactive entities, and strengthening reporting accuracy across business functions.",
+            "tools":"ERP • Excel • Data Cleaning"
+        },
+
+        {
+            "title":"Production & KPI Reporting Systems",
+            "impact":"Built tracking and reporting systems across multiple production categories, reducing manual monitoring effort and improving visibility for recurring monthly reporting processes.",
+            "tools":"Excel • Reporting • Operations"
+        },
+
+        {
+            "title":"Marketing Workflow Automation",
+            "impact":"Designed multiple forms, trackers, and structured workflows supporting daily activity tracking, improving reporting consistency and reducing fragmented data collection processes.",
+            "tools":"Google Forms • Sheets • Automation"
+        },
+
+        {
+            "title":"Sales & Distributor Analytics",
+            "impact":"Conducted distributor analysis, repeat enquiry analysis, and sales projections across multiple business segments to improve decision-making visibility for growth initiatives.",
+            "tools":"Analytics • Excel • Business"
+        },
+
+        {
+            "title":"Manufacturing Market Intelligence",
+            "impact":"Performed one of the first structured market analyses across manufacturing segments using open-source datasets, industry mapping, RTIs, and lead generation workflows to support expansion activities.",
+            "tools":"Research • Analysis • Strategy"
+        },
+
+        {
+            "title":"Customer Intelligence & Cross Selling Analysis",
+            "impact":"Cleaned and analyzed historical datasets spanning 2016–2026, uncovering cross-selling opportunities, repeat business patterns, and active customer segments.",
+            "tools":"Data Cleaning • Excel • Analysis"
+        }
+
+    ]
+
+    for p in professional_projects:
+
+        st.markdown("<div class='card'>", unsafe_allow_html=True)
+
+        st.subheader(p["title"])
+
+        st.write(p["impact"])
+
+        st.caption(p["tools"])
+
+        st.markdown("</div>", unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    # -----------------------------------------
+    # INDEPENDENT PROJECTS
+    # -----------------------------------------
+
+    st.markdown("### Independent Projects")
 
     projects = [
+
         {
             "title": "Job Market Analytics",
             "img1": "assets/dashboards/job_market.jpg",
@@ -243,6 +311,7 @@ elif st.session_state.page == "Projects":
             "github": "https://github.com/shreya-sabale-sql/job-market-analytics",
             "two_images": True
         },
+
         {
             "title": "Consumption Paradox",
             "img1": "assets/dashboards/consumption.jpg",
@@ -250,6 +319,7 @@ elif st.session_state.page == "Projects":
             "github": "https://github.com/shreya-sabale-sql/consumption-paradox",
             "two_images": False
         },
+
         {
             "title": "SLA Bottleneck Analysis",
             "img1": "assets/dashboards/sla.jpg",
@@ -257,6 +327,7 @@ elif st.session_state.page == "Projects":
             "github": "https://github.com/shreya-sabale-sql/sql-powerbi-sla-bottleneck-analysis",
             "two_images": False
         },
+
         {
             "title": "User Funnel Analysis",
             "img1": "assets/dashboards/funnel.jpg",
@@ -264,6 +335,7 @@ elif st.session_state.page == "Projects":
             "github": "https://github.com/shreya-sabale-sql/Drop-Off-Rate-User-Funnel-",
             "two_images": False
         },
+
         {
             "title": "Stock Market Analysis",
             "img1": "assets/dashboards/stock.jpg",
@@ -271,6 +343,7 @@ elif st.session_state.page == "Projects":
             "github": "https://github.com/shreya-sabale-sql/stock-market-LG",
             "two_images": False
         },
+
         {
             "title": "Healthcare Digital Transformation",
             "img1": "assets/dashboards/healthcare.jpg",
@@ -278,20 +351,26 @@ elif st.session_state.page == "Projects":
             "github": "https://github.com/shreya-sabale-sql/healthcare_digital_transformation",
             "two_images": False
         }
+
     ]
 
     cols = st.columns(2)
 
     for i, p in enumerate(projects):
+
         with cols[i % 2]:
+
             st.markdown("<div class='card'>", unsafe_allow_html=True)
+
             st.image(p["img1"], use_container_width=True)
+
             st.subheader(p["title"])
 
             if p.get("two_images"):
                 st.image(p["img2"], use_container_width=True)
 
             st.write(p["desc"])
+
             st.markdown(f"[💻 GitHub Repo]({p['github']})")
 
             if p.get("live"):
@@ -300,27 +379,141 @@ elif st.session_state.page == "Projects":
             st.markdown("</div>", unsafe_allow_html=True)
 
     if st.button("⬅ Back"):
+
         st.session_state.page = "Home"
+
         st.rerun()
 
 # -------------------------------------------------
-# BLOGS
+# NOTES ALONG THE WAY
 # -------------------------------------------------
+
 elif st.session_state.page == "Blogs":
 
-    st.markdown("## ✍️ Blogs & Publications")
-    st.markdown("### 📄 White Paper – Indian Economy")
+    st.markdown("## Notes Along The Way")
 
-    st.download_button(
-        "Download PDF",
-        open("assets/white_paper_indian_economy.pdf", "rb"),
-        "Indian_Economy_White_Paper.pdf"
-    )
+    entries = [
+
+        {
+            "title":"On Not Putting All Eggs In One Basket",
+            "text":"""
+For a long time, I believed growth meant going deeper into one thing and sticking to it relentlessly.
+
+Over time, that belief started changing.
+
+Working across analytics, business problems, volunteering, reading, writing, and different experiences made me realise that growth is rarely linear. The things that seem unrelated often connect later in unexpected ways.
+
+Learning analytics improved how I think about systems. Volunteering changed how I think about people. Working across functions changed how I think about business.
+
+This phase of life feels less about specialization and more about exploration.
+
+And maybe exploration itself is a form of specialization.
+"""
+        },
+
+        {
+            "title":"Things Work Taught Me Faster Than College",
+            "text":"""
+Work changed the way I understand business.
+
+In theory, processes are clean.
+
+In reality, data is incomplete, systems are fragmented, priorities change, and people work differently.
+
+Working with ERP systems, customer records, production trackers, dashboards, and reporting workflows taught me that business problems rarely stay inside departmental boundaries.
+
+Sometimes the problem is technical.
+
+More often, it is operational.
+
+And occasionally, it is simply communication.
+
+The more I work, the more I realize that understanding context is often as important as understanding numbers.
+"""
+        },
+
+        {
+            "title":"Why I Started Saying Yes More Often",
+            "text":"""
+A surprising number of meaningful experiences happened because I stopped waiting to feel ready.
+
+Volunteering as a UPSC scribe.
+
+Working on projects outside my comfort zone.
+
+Taking ownership of systems I had never built before.
+
+Working across departments that initially felt unfamiliar.
+
+Saying yes more often did not always create certainty.
+
+But it created perspective.
+
+And perspective has probably been more valuable than certainty.
+"""
+        },
+
+        {
+            "title":"On Measuring Progress",
+            "text":"""
+Sometimes progress feels invisible while living through it.
+
+You finish projects.
+
+Build trackers.
+
+Learn tools.
+
+Take on responsibilities.
+
+Move to the next thing.
+
+And then forget how much changed.
+
+Part of why this website exists is because I wanted a place to document what I was learning, building, and struggling with.
+
+Not only for recruiters.
+
+But for future me.
+
+Because growth often becomes visible only in retrospect.
+"""
+        },
+
+        {
+            "title":"Curiosity As A Career Strategy",
+            "text":"""
+I used to think curiosity was a distraction.
+
+Something that prevented focus.
+
+Now I think the opposite.
+
+Curiosity is probably why I enjoy working across analytics, operations, systems, people, and business problems.
+
+Most interesting problems are interdisciplinary.
+
+Understanding one area often improves understanding of another.
+
+Curiosity may not always create direct answers.
+
+But it consistently creates better questions.
+"""
+        }
+
+    ]
+
+    for e in entries:
+
+        with st.expander(e["title"]):
+
+            st.write(e["text"])
 
     if st.button("⬅ Back"):
-        st.session_state.page = "Home"
-        st.rerun()
 
+        st.session_state.page = "Home"
+
+        st.rerun()
 # -------------------------------------------------
 # CERTIFICATIONS
 # -------------------------------------------------
