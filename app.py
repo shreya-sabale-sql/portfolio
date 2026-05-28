@@ -69,6 +69,7 @@ if st.session_state.page == "Home":
     with right:
 
         st.markdown("# Shreya Sabale")
+
         st.markdown("### Business Analyst")
 
         st.markdown("""
@@ -97,66 +98,71 @@ if st.session_state.page == "Home":
 
     st.markdown("---")
 
-st.subheader("What I Work On")
+    st.subheader("What I Work On")
 
-c1,c2 = st.columns(2)
+    c1,c2 = st.columns(2)
 
-with c1:
+    with c1:
 
-    st.markdown("""
-    ### Business Analytics
+        st.markdown("""
+        ### Business Analytics
 
-    - KPI Tracking & Reporting  
-    - Sales & Distributor Analysis  
-    - Customer Behaviour Analysis  
-    - Sales Projection & Forecasting  
-    - Business Growth Analysis  
-    """)
+        - KPI Tracking & Reporting  
+        - Sales & Distributor Analysis  
+        - Customer Behaviour Analysis  
+        - Sales Projection & Forecasting  
+        - Business Growth Analysis  
+        """)
 
-    st.markdown("""
-    ### Operational Systems
+        st.markdown("""
+        ### Operational Systems
 
-    - ERP Analytics  
-    - Dashboard Development  
-    - Tracker Creation  
-    - Workflow Automation  
-    - Data Cleaning  
-    """)
+        - ERP Analytics  
+        - Dashboard Development  
+        - Tracker Creation  
+        - Workflow Automation  
+        - Data Cleaning  
+        """)
 
-with c2:
+    with c2:
 
-    st.markdown("""
-    ### Production & Operations
+        st.markdown("""
+        ### Production & Operations
 
-    - Production Tracking  
-    - Process Visibility  
-    - Performance Monitoring  
-    - Product Lifecycle Analysis  
-    """)
+        - Production Tracking  
+        - Process Visibility  
+        - Performance Monitoring  
+        - Product Lifecycle Analysis  
+        """)
 
-    st.markdown("""
-    ### Cross Functional Work
+        st.markdown("""
+        ### Cross Functional Work
 
-    - Marketing Analytics  
-    - HR Policy Work  
-    - Export Tracking  
-    - Digital Initiatives  
-    - Research & Lead Generation  
-    """)
+        - Marketing Analytics  
+        - HR Policy Work  
+        - Export Tracking  
+        - Digital Initiatives  
+        - Research & Lead Generation  
+        """)
+
     st.markdown("---")
 
     nav1,nav2,nav3,nav4 = st.columns(4)
 
     if nav1.button("My Story"):
-        st.session_state.page="About"
+        st.session_state.page = "About"
         st.rerun()
 
     if nav2.button("Selected Work"):
-        st.session_state.page="Projects"
+        st.session_state.page = "Projects"
         st.rerun()
 
     if nav3.button("Certifications"):
-        st.session_state.page="Certifications"
+        st.session_state.page = "Certifications"
+        st.rerun()
+
+    if nav4.button("Notes Along The Way"):
+        st.session_state.page = "Blogs"
         st.rerun()
 
     if nav4.button("Resume"):
