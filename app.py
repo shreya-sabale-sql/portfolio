@@ -84,7 +84,7 @@ if st.session_state.page == "Home":
         col1,col2,col3,col4 = st.columns(4)
 
         with col1:
-            st.metric("Functions", "Sales + HR")
+            st.metric("Functions", "Sales + Marketing")
 
         with col2:
             st.metric("Tools", "Excel + SQL")
