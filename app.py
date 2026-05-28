@@ -97,50 +97,52 @@ if st.session_state.page == "Home":
 
     st.markdown("---")
 
-    st.subheader("What I Work On")
+st.subheader("What I Work On")
 
-    c1,c2 = st.columns(2)
+c1,c2 = st.columns(2)
 
-    with c1:
+with c1:
 
-        st.markdown("""
-        ### Operational Analytics
+    st.markdown("""
+    ### Business Analytics
 
-        - KPI Tracking  
-        - Reporting Workflows  
-        - Dashboard Development  
-        - Process Visibility  
-        """)
+    - KPI Tracking & Reporting  
+    - Sales & Distributor Analysis  
+    - Customer Behaviour Analysis  
+    - Sales Projection & Forecasting  
+    - Business Growth Analysis  
+    """)
 
-        st.markdown("""
-        ### Business Systems
+    st.markdown("""
+    ### Operational Systems
 
-        - ERP Analysis  
-        - Production Tracking  
-        - Automation  
-        - Data Cleaning  
-        """)
+    - ERP Analytics  
+    - Dashboard Development  
+    - Tracker Creation  
+    - Workflow Automation  
+    - Data Cleaning  
+    """)
 
-    with c2:
+with c2:
 
-        st.markdown("""
-        ### Growth & Marketing
+    st.markdown("""
+    ### Production & Operations
 
-        - Distributor Analysis  
-        - Customer Insights  
-        - Sales Projection  
-        - Marketing Analytics  
-        """)
+    - Production Tracking  
+    - Process Visibility  
+    - Performance Monitoring  
+    - Product Lifecycle Analysis  
+    """)
 
-        st.markdown("""
-        ### Cross Functional Work
+    st.markdown("""
+    ### Cross Functional Work
 
-        - Sales  
-        - Marketing  
-        - HR  
-        - Business Reporting  
-        """)
-
+    - Marketing Analytics  
+    - HR Policy Work  
+    - Export Tracking  
+    - Digital Initiatives  
+    - Research & Lead Generation  
+    """)
     st.markdown("---")
 
     nav1,nav2,nav3,nav4 = st.columns(4)
@@ -170,31 +172,51 @@ elif st.session_state.page == "About":
 
     st.markdown("## 👩‍💼 About Me")
 
+# -------------------------------------------------
+# ABOUT
+# -------------------------------------------------
+
+elif st.session_state.page == "About":
+
+    st.markdown("## My Story")
+
     st.markdown("""
-    I enjoy breaking down complex problems and finding clarity through data.
-    What draws me to analytics is the ability to transform raw information
-    into insights that help make better decisions.
+A few months ago, I was building projects and searching for opportunities in analytics. 
+What started as learning tools gradually turned into understanding how businesses actually function — through systems, people, processes, and data.
 
-    I work with **SQL, Python, Power BI, and Excel** and enjoy building
-    data-driven solutions, dashboards, and analytical models.
+Today, I work as a Business Analyst within a manufacturing environment, working across sales, marketing, production, HR, exports, and operational systems. My work often involves creating visibility where complexity exists — whether through dashboards, trackers, reporting workflows, or structured analysis.
 
-    ### How I Think
-    • Logical and structured  
-    • Curious and analytical  
-    • Focused on clarity  
-    • Driven by real-world impact  
+What interests me most is understanding how seemingly unrelated pieces connect:
 
-    ### What I’m Working Towards
-    • Strengthening business analytics skills  
-    • Working with real datasets  
-    • Improving storytelling with data  
-    """)
+• how operational processes influence decisions  
+• how data quality affects business outcomes  
+• how systems shape efficiency  
+• how structure creates clarity  
+
+Beyond work, I enjoy exploring ideas through volunteering, reading, writing, and experiences that challenge how I think. I see analytics less as a technical skillset and more as a way of observing and understanding the world around me.
+""")
+
+    st.markdown("""
+
+### Currently Exploring
+
+• Business intelligence and operational analytics  
+• Process improvement through data systems  
+• Management education and business strategy  
+• Cross-functional problem solving  
+• Building analytical workflows that scale  
+
+""")
 
     # ----- VIDEO SECTION -----
+
     st.markdown("<div class='card'>", unsafe_allow_html=True)
 
-    st.markdown("### 🎥 Project Walkthrough – Consumption Paradox")
-    st.write("A short explanation of my analysis and decision-making process.")
+    st.markdown("### 🎥 Analytical Walkthrough")
+
+    st.write(
+        "A walkthrough explaining the thinking, analysis, and decision-making process behind one of my projects."
+    )
 
     st.video("assets/videos/consumption_paradox.mp4")
 
