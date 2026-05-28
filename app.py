@@ -165,12 +165,6 @@ with c2:
             open("assets/resume.pdf","rb"),
             "Shreya_Sabale_Resume.pdf"
         )
-# -------------------------------------------------
-# ABOUT
-# -------------------------------------------------
-elif st.session_state.page == "About":
-
-    st.markdown("## 👩‍💼 About Me")
 
 # -------------------------------------------------
 # ABOUT
